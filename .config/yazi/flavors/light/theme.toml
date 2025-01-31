@@ -1,0 +1,155 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# Gruvbox Light theme for Yazi (Medium Contrast)
+# Based on https://github.com/morhetz/gruvbox
+
+# : Manager {{{
+[manager]
+cwd = { fg = "#076678" }  # neutral_blue
+
+# Main colors
+fg = "#3c3836"  # dark1
+bg = "#fbf1c7"  # light0
+preview_fg = "#3c3836"  # dark1
+preview_bg = "#fbf1c7"  # light0
+
+# Hovered
+hovered = { fg = "#fbf1c7", bg = "#076678" }  # light0, neutral_blue
+preview_hovered = { underline = true }
+
+# Find
+find_keyword = { fg = "#79740e", italic = true }   # neutral_green
+find_position = { fg = "#af3a03", bg = "reset", italic = true }  # neutral_orange
+
+# Marker
+marker_selected = { fg = "#79740e", bg = "#79740e" }  # neutral_green
+marker_copied = { fg = "#79740e", bg = "#79740e" }    # neutral_green
+marker_cut = { fg = "#9d0006", bg = "#9d0006" }        # neutral_red
+
+# Tab
+tab_active = { fg = "#fbf1c7", bg = "#bdae93" }    # light0, light3
+tab_inactive = { fg = "#7c6f64", bg = "#ebdbb2" }  # dark4, light1
+tab_width = 1
+
+# Border
+border_symbol = "│"
+border_style = { fg = "#bdae93" }  # light3
+
+# Highlighting
+syntect_theme = "~/.config/yazi/Gruvbox-Light.tmTheme"
+# : }}}
+
+# : Status {{{
+[status]
+separator_open = ""
+separator_close = ""
+separator_style = { fg = "#ebdbb2", bg = "#ebdbb2" }  # light1
+
+# Progress
+progress_label = { fg = "#3c3836", bold = true }    # dark1
+progress_normal = { fg = "#bdae93", bg = "#ebdbb2" }  # light3, light1
+progress_error = { fg = "#9d0006", bg = "#ebdbb2" }    # neutral_red, light1
+
+# Permissions
+permissions_t = { fg = "#bdae93" }  # light3
+permissions_r = { fg = "#79740e" }  # neutral_green
+permissions_w = { fg = "#9d0006" }  # neutral_red
+permissions_x = { fg = "#79740e" }  # neutral_green
+permissions_s = { fg = "#bdae93" }  # light3
+
+# Bar
+bar_symbol = "█"
+bar_style = { fg = "#bdae93", bg = "#ebdbb2" }  # light3, light1
+
+# Separator symbols
+separator_style = { fg = "#bdae93", bg = "#ebdbb2" }  # light3, light1
+separator_symbol = ""
+separator_front_symbol = ""
+
+# Owner
+owner = { fg = "#3c3836" }  # dark1
+group = { fg = "#928374" }  # gray
+
+# Count
+count = { fg = "#3c3836" }  # dark1
+# : }}}
+
+# : Mode {{{
+[mode]
+normal_main = { fg = "#fbf1c7", bg = "#7c6f64", bold = true }  # light0, dark4
+normal_alt = { fg = "#fbf1c7", bg = "#7c6f64", bold = true }    # light0, dark4
+
+select_main = { fg = "#fbf1c7", bg = "#79740e", bold = true }  # light0, neutral_green
+select_alt = { fg = "#fbf1c7", bg = "#79740e", bold = true }    # light0, neutral_green
+
+unset_main = { fg = "#fbf1c7", bg = "#b16286", bold = true }  # light0, neutral_purple
+unset_alt = { fg = "#fbf1c7", bg = "#b16286", bold = true }    # light0, neutral_purple
+# : }}}
+
+# : Input {{{
+[input]
+border = { fg = "#665c54" }  # dark3
+title = {}
+value = {}
+selected = { reversed = true }
+# : }}}
+
+# : Select {{{
+[select]
+border = { fg = "#bdae93" }    # light3
+active = { fg = "#af3a03" }     # neutral_orange
+inactive = {}
+# : }}}
+
+# : Tasks {{{
+[tasks]
+border = { fg = "#bdae93" }  # light3
+title = {}
+hovered = { underline = true }
+# : }}}
+
+# : Which {{{
+[which]
+mask = { bg = "#ebdbb2" }        # light1
+cand = { fg = "#076678" }        # neutral_blue
+rest = { fg = "#928374" }        # gray
+desc = { fg = "#af3a03" }        # neutral_orange
+separator = "  "
+separator_style = { fg = "#bdae93" }  # light3
+# : }}}
+
+# : Help {{{
+[help]
+on = { fg = "#79740e" }      # neutral_green
+off = { fg = "#9d0006" }     # neutral_red
+exec = { fg = "#076678" }    # neutral_blue
+desc = { fg = "#928374" }    # gray
+hovered = { bg = "#bdae93", bold = true }  # light3
+footer = { fg = "#ebdbb2", bg = "#7c6f64" }  # light1, dark4
+# : }}}
+
+# : File-specific styles {{{
+[filetype]
+
+rules = [
+    # Images
+    { mime = "image/*", fg = "#076678" },  # neutral_blue
+
+    # Videos
+    { mime = "video/*", fg = "#79740e" },  # neutral_green
+    { mime = "audio/*", fg = "#79740e" },  # neutral_green
+
+    # Archives
+    { mime = "application/zip",             fg = "#af3a03" },  # neutral_orange
+    { mime = "application/gzip",            fg = "#af3a03" },
+    { mime = "application/x-tar",           fg = "#af3a03" },
+    { mime = "application/x-bzip",          fg = "#af3a03" },
+    { mime = "application/x-bzip2",         fg = "#af3a03" },
+    { mime = "application/x-7z-compressed", fg = "#af3a03" },
+    { mime = "application/x-rar",           fg = "#af3a03" },
+
+    # Fallback
+    { name = "*", fg = "#7c6f64" },   # dark4
+    { name = "*/", fg = "#076678" }  # neutral_blue
+]
+# : }}}
