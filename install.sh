@@ -5,7 +5,10 @@ DOTFILES=(
   "$HOME/.config/nvim"
   "$HOME/.config/ghostty"
   "$HOME/.config/yazi"
-  # Add more files/directories to symlink here
+  "$HOME/.zshrc"
+  "$HOME/.zshenv"
+  "$HOME/.zprofile"
+  "$HOME/.zsh"
 )
 
 DOTFILES_DIR="$HOME/.dotfiles"
