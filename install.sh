@@ -4,6 +4,7 @@
 DOTFILES=(
   "$HOME/.config/nvim"
   "$HOME/.config/ghostty"
+  "$HOME/.config/yazi"
   # Add more files/directories to symlink here
 )
 
@@ -13,18 +14,40 @@ DOTFILES_DIR="$HOME/.dotfiles"
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 BACKUP_DIR="$HOME/.dotfiles_backup/$TIMESTAMP"
 
-# Function to backup existing file/directory
-backup_if_exists() {
+# Function to check if symlink points to our dotfiles
+is_correct_symlink() {
     local target="$1"
+    local expected_source="$2"
+    
+    if [ -L "$target" ]; then
+        local link_dest="$(readlink "$target")"
+        if [ "$link_dest" = "$expected_source" ]; then
+            return 0  # Correct symlink
+        fi
+    fi
+    return 1  # Not a symlink or wrong destination
+}
+
+# Function to backup existing file/directory
+backup_if_needed() {
+    local target="$1"
+    local source="$2"
     local backup_path="$BACKUP_DIR/${target#$HOME/}"
     
-    # Only backup if it exists and is not a symlink to our dotfiles
-    if [ -e "$target" ] && [ ! -L "$target" -o "$(readlink "$target")" != "$DOTFILES_DIR/${target#$HOME/}" ]; then
+    # If it's already correctly symlinked, do nothing
+    if is_correct_symlink "$target" "$source"; then
+        echo "Correct symlink already exists: $target -> $source"
+        return 1  # No backup needed
+    fi
+    
+    # If it exists (as a file, directory, or wrong symlink), back it up
+    if [ -e "$target" -o -L "$target" ]; then
         echo "Backing up $target to $backup_path"
         mkdir -p "$(dirname "$backup_path")"
         mv "$target" "$backup_path"
-        return 0  # Backup was needed and performed
+        return 0  # Backup was performed
     fi
+    
     return 1  # No backup needed
 }
 
@@ -48,12 +71,15 @@ for file in "${DOTFILES[@]}"; do
     mkdir -p "$(dirname "$file")"
     
     # Backup existing file if necessary
-    if backup_if_exists "$file"; then
+    if backup_if_needed "$file" "$source_path"; then
         ((BACKUP_COUNT++))
     fi
 
-    # Create symbolic link
-    ln -sf "$source_path" "$file"
+    # Create symbolic link if it doesn't exist or points to wrong location
+    if ! is_correct_symlink "$file" "$source_path"; then
+        ln -sf "$source_path" "$file"
+        echo "Created symlink: $file -> $source_path"
+    fi
 done
 
 # Print summary
