@@ -1,0 +1,12 @@
+{
+  "Figure": {
+    "prefix": "figure",
+    "body": [
+      "\\begin{figure}[H]",
+      "\t\\centering",
+      "\t\\includegraphics{figures/$1}",
+      "\\end{figure}"
+    ],
+    "description": "Insert a figure with image path"
+  }
+}

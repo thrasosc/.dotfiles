@@ -1,0 +1,13 @@
+# Ignore swap files from editors like vim
+*.swp
+
+# Ignore temporary files
+*.bak
+*.tmp
+
+# Ignore macOS .DS_Store files
+.DS_Store
+
+# Ignore log files
+*.log
+
