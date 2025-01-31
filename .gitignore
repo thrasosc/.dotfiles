@@ -23,3 +23,9 @@ node_modules/
 # Undo directory
 undodir/
 
+# Local/private configurations
+**/*local*
+**/*private*
+**/*.secret*
+**/*.key*
+
