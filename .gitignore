@@ -11,3 +11,15 @@
 # Ignore log files
 *.log
 
+# Neovim specific
+.netrwhist
+plugin/packer_compiled.lua
+lazy-lock.json
+.luarc.json
+
+# Node.js
+node_modules/
+
+# Undo directory
+undodir/
+
