@@ -21,6 +21,16 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			tex = { "latexindent" },
+			python = { "black", "isort" },
+			sh = { "shfmt", "shellcheck" },
+			bash = { "shfmt", "shellcheck" },
+			json = { "jq" },
+			yaml = { "yamlfmt" },
+			markdown = { "prettier" },
+			html = { "prettier" },
+			css = { "prettier" },
+			javascript = { "prettier" },
+			typescript = { "prettier" },
 		},
 		-- Set default options
 		default_format_opts = {
