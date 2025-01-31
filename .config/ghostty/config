@@ -1,0 +1,9 @@
+# Font
+font-size = 12
+
+# Window
+window-height = 29
+window-width = 105
+
+# Theme
+theme = dark:GruvboxDark,light:GruvboxLight
