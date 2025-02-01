@@ -9,17 +9,18 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
+				automatic_installation = true,
 				ensure_installed = {
-					"lua_ls",    -- Lua
-					"texlab",    -- LaTeX
-					"pyright",   -- Python
-					"bashls",    -- Bash/Shell
-					"jsonls",    -- JSON
-					"yamlls",    -- YAML
-					"marksman",  -- Markdown
-					"html",      -- HTML
-					"cssls",     -- CSS
-					"ts_ls",  -- JavaScript/TypeScript
+					"lua_ls", -- Lua
+					"texlab", -- LaTeX
+					"pyright", -- Python
+					"bashls", -- Bash/Shell
+					"jsonls", -- JSON
+					"yamlls", -- YAML
+					"marksman", -- Markdown
+					"html", -- HTML
+					"cssls", -- CSS
+					"ts_ls", -- JavaScript/TypeScript
 				},
 			})
 		end,
@@ -28,7 +29,7 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require("lspconfig")
-			
+
 			-- Global LSP settings
 			vim.diagnostic.config({
 				virtual_text = true,
@@ -51,17 +52,6 @@ return {
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
 
-			-- Server configurations
-			lspconfig.lua_ls.setup({
-				settings = {
-					Lua = {
-						diagnostics = {
-							globals = { "vim" }, -- Recognize vim global
-						},
-					},
-				},
-			})
-			
 			lspconfig.texlab.setup({})
 		end,
 	},
