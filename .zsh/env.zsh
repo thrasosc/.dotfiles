@@ -6,6 +6,7 @@ export PATH="$HOME/Development/flutter/bin:$PATH"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
 export PATH="$HOME/.codeium/windsurf/bin:$PATH"  # Added by Windsurf
+export PATH="/usr/local/NuSMV/bin:$PATH"
 
 # Initialize zoxide
 eval "$(zoxide init zsh)"
