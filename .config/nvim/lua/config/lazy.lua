@@ -29,6 +29,8 @@ vim.opt.clipboard = "unnamedplus" -- Yank to system clipboard
 -- vim.o.wrap = false -- Disable line wrapping
 vim.opt.breakindent = true -- Maintain indentation of wrapped lines
 vim.opt.linebreak = true -- Wrap at word boundaries instead of single letters
+-- Keep the cursor as a block in all modes
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50"
 
 -- Setup lazy.nvim
 require("lazy").setup({
