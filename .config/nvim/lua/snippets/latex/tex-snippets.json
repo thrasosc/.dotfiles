@@ -2,7 +2,7 @@
   "Figure": {
     "prefix": "figure",
     "body": [
-      "\\begin{figure}[H]",
+      "\\begin{figure}",
       "\t\\centering",
       "\t\\includegraphics{figures/$1}",
       "\\end{figure}"
