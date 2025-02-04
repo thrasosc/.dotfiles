@@ -30,6 +30,8 @@ vim.opt.clipboard = "unnamedplus" -- Yank to system clipboard
 vim.opt.breakindent = true -- Maintain indentation of wrapped lines
 vim.opt.linebreak = true -- Wrap at word boundaries instead of single letters
 vim.opt.guicursor = "n-v-c:block,i-ci-ve:block-blinkwait300-blinkon200-blinkoff150,r-cr:hor20,o:hor50" -- Configure cursor to be a blinking block in insert mode
+vim.opt.spelllang = "en_gb"
+vim.opt.spell = true
 
 -- Setup lazy.nvim
 require("lazy").setup({
