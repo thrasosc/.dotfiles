@@ -1,43 +1,65 @@
 # Dotfiles
 
-This repository contains my personal dotfiles configuration for macOS.
+This repository contains my personal dotfiles configuration, managed using [GNU Stow](https://www.gnu.org/software/stow/).
 
-## Installation
+## Setup
 
-1. Clone this repository:
+```bash
+# Install GNU Stow
+Linux: pacman -S stow     # or your package manager
+macOS: brew install stow
 
-   ```bash
-   git clone https://github.com/thrasosc/dotfiles.git ~/.dotfiles
-   ```
+# Clone and enter repository
+git clone https://github.com/thrasosc/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+```
 
-2. Run the installation script:
-   ```bash
-   cd ~/.dotfiles
-   ./install.sh
-   ```
+## Structure
 
-The installation script automatically:
+Each tool's configuration is organized in its own directory, mirroring the structure from the home directory:
 
-- Creates symbolic links in your home directory that point to the dotfiles
-- Backs up existing configurations with timestamps
-- Skips already correctly linked files
+```
+~/.dotfiles/
+├── ghostty/
+│   └── .config/
+│       └── ghostty/
+└── nvim/
+    └── .config/
+        └── nvim/
+```
 
-## Backup System
+## Usage
 
-The installation process includes an automatic backup system that:
+### Basic Stow Commands
 
-- Creates timestamped backups (`~/.dotfiles_backup/[timestamp]`)
-- Only backs up files that would be replaced
-- Preserves the original directory structure
+- Link a configuration:
 
-## Customization
+  ```bash
+  stow <package>      # e.g., stow ghostty
+  ```
 
-### Adding New Tools
+- Unlink a configuration:
 
-1. Simply add your configuration files to `.dotfiles/` mirroring the structure you want in your home directory
-2. Run `install.sh` to create the symlinks
+  ```bash
+  stow -D <package>   # e.g., stow -D ghostty
+  ```
 
-For example:
+- Relink a configuration (useful after updates):
+  ```bash
+  stow -R <package>   # e.g., stow -R ghostty
+  ```
 
-- `.dotfiles/.config/tool/` → `~/.config/tool/`
-- `.dotfiles/.zshrc` → `~/.zshrc`
+### Adding New Configurations
+
+1. Create a new directory for your tool
+2. Mirror the exact structure from your home directory
+3. Move your configuration files into place
+4. Use stow to create the symlinks
+
+For example, to add tmux configuration:
+
+```bash
+mkdir -p tmux/.config/tmux
+mv ~/.config/tmux/tmux.conf tmux/.config/tmux/
+stow tmux
+```
