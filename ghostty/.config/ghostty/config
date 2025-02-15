@@ -10,3 +10,4 @@ shell-integration-features = no-cursor
 
 # Theme
 theme = dark:GruvboxDark,light:GruvboxLight
+macos-icon = retro
