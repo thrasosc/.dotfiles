@@ -10,7 +10,7 @@ Linux: pacman -S stow     # or your package manager
 macOS: brew install stow
 
 # Clone and enter repository
-git clone https://github.com/thrasosc/dotfiles.git ~/.dotfiles
+git clone https://github.com/thrasosc/.dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ```
 
