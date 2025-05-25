@@ -3,5 +3,4 @@
 
 # But not these files
 !.gitignore
-!.config/nvim/**
 !.config/ghostty/**
