@@ -9,6 +9,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'morhetz/gruvbox'
 Plug 'sile-typesetter/vim-sile'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-repeat'
 call plug#end()
 
 " General Settings
