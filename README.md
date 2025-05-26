@@ -9,6 +9,6 @@ git clone https://github.com/thrasosc/.dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 stow .
 ```
-
-- If something new *should* be tracked, update `.gitignore` accordingly.
-- If something *should not* be tracked, update `.stow-local-ignore` accordingly.
+> **Note:**
+> - If something new *should* be **tracked**, update `.gitignore` accordingly.
+> - If something *should not* be **stowed**, update `.stow-local-ignore` accordingly.
