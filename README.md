@@ -11,4 +11,4 @@ stow .
 ```
 > **Note:**
 > - If something new *should* be **tracked**, update `.gitignore` accordingly.
-> - If something *should not* be **stowed**, update `.stow-local-ignore` accordingly.
+> - If something new *should not* be **stowed**, update `.stow-local-ignore` accordingly.
