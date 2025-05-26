@@ -1,9 +1,15 @@
-# Ignore everything
+# Ignore everything by default
 *
 
-# But not these files
+# Essentials
 !.gitignore
 !.README.md
 !.stow-local-ignore
+!.config/
+
+# Vim
 !.vimrc
-!.config/ghostty/**
+
+# Ghostty
+!.config/ghostty/
+!.config/ghostty/config
