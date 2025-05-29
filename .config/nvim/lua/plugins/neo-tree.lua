@@ -10,6 +10,9 @@ return {
     lazy = false, -- neo-tree will lazily load itself
     ---@module "neo-tree"
     ---@type neotree.Config?
+    opts = {
+        -- fill any relevant options here
+    },
     config = function()
         vim.keymap.set('n', '<C-n>', ':Neotree filesystem toggle right<CR>', { desc = 'Toggle Neotree' })
     end
