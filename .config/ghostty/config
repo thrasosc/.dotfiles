@@ -10,3 +10,8 @@ window-width = 105
 
 # Cursor
 shell-integration-features = no-cursor
+
+# Keybinds
+macos-option-as-alt = left
+keybind = alt+left=unbind
+keybind = alt+right=unbind
