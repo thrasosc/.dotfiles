@@ -10,6 +10,11 @@
 # Vim
 !.vimrc
 
+# Neovim
+!.config/nvim/
+!.config/nvim/**
+.config/nvim/**/.DS_Store
+
 # Ghostty
 !.config/ghostty/
 !.config/ghostty/config
