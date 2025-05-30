@@ -13,6 +13,7 @@ vim.cmd("set termguicolors")
 vim.cmd("set wildmode=longest,list,full")
 vim.cmd("set background=dark")
 vim.cmd([[colorscheme gruvbox]])
+vim.diagnostic.config({ virtual_text = true })
 
 -- Indentation
 vim.cmd("set shiftwidth=4")
