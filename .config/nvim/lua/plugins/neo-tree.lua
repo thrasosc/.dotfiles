@@ -10,9 +10,7 @@ return {
 	---@module "neo-tree"
 	---@type neotree.Config?
 	opts = {
-		source_selector = {
-			winbar = true,
-		},
+        -- config
 	},
 	keys = {
 		{ "<C-n>", ":Neotree toggle right<CR>", desc = "Toggle Neotree" },
