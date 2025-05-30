@@ -2,7 +2,7 @@
 font-size = 12
 
 # Theme
-theme = GruvboxDark
+theme = light:GruvboxLight,dark:GruvboxDark
 
 # Window
 window-height = 29
