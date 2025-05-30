@@ -1,7 +1,7 @@
 require("config.lazy")
 
 -- General Settings
-vim.cmd("setlocal spell spelllang=en_gb")
+vim.cmd("setlocal spelllang=en_gb")
 vim.cmd("set mouse=a")
 vim.cmd("set clipboard=unnamed") -- on Linux this needs to be unnamedplus
 
