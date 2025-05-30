@@ -27,6 +27,13 @@ return {
 			lspconfig.rust_analyzer.setup({})
 			lspconfig.clangd.setup({})
             lspconfig.tinymist.setup({})
+            lspconfig.tinymist.setup({
+                settings = {
+                    formatterMode = "typstyle",
+                    exportPdf = "onType",
+                    semanticTokens = "disable",
+                },
+            })
 
 			-- Global mappings.
 			-- See `:help vim.diagnostic.*` for documentation on any of the below functions
