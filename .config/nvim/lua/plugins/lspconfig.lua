@@ -2,12 +2,13 @@ return {
 	{
 		"mason-org/mason-lspconfig.nvim", -- Bridge between Mason and Neovim
 		opts = {
-			ensure_installed = {
+			ensure_installed = { -- LSPs
 				"lua_ls",
 				"pyright",
 				"ts_ls",
 				"rust_analyzer",
 				"clangd",
+                "tinymist"
 			},
 		},
 		dependencies = {
@@ -25,6 +26,7 @@ return {
 			lspconfig.ts_ls.setup({})
 			lspconfig.rust_analyzer.setup({})
 			lspconfig.clangd.setup({})
+            lspconfig.tinymist.setup({})
 
 			-- Global mappings.
 			-- See `:help vim.diagnostic.*` for documentation on any of the below functions
