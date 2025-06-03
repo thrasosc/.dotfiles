@@ -1,5 +1,9 @@
+# Font
+font-family = "Fantasque Sans Mono"
+font-size = 16
+
 # Theme
-theme = light:GruvboxLight,dark:GruvboxDark
+theme = light:ayu_light,dark:ayu
 
 # Window
 window-height = 29
