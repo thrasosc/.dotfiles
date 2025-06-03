@@ -8,7 +8,8 @@ return {
 				"black",
 				"isort",
 				"clang-format",
-                "typstyle"
+                "typstyle",
+                "rustfmt"
 			},
 		},
 	},
