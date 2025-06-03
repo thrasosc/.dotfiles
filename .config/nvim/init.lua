@@ -13,6 +13,7 @@ vim.cmd("set nowrap")
 vim.cmd("set termguicolors")
 vim.cmd("set wildmode=longest,list,full")
 vim.diagnostic.config({ virtual_text = true })
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:block-blinkwait300-blinkon200-blinkoff150,r-cr:hor20,o:hor50" -- Configure cursor to be a blinking block in insert mode
 
 -- Indentation
 vim.cmd("set shiftwidth=4")
