@@ -18,7 +18,7 @@ return {
     },
     {
         "neovim/nvim-lspconfig", -- Official Neovim LSP plugin
-        dependencies = { "saghen/blink.cmp" },
+        dependencies = { "saghen/blink.cmp", "nvim-telescope/telescope.nvim" },
         config = function()
             local lspconfig = require("lspconfig")
             local capabilities = require("blink.cmp").get_lsp_capabilities()
@@ -37,13 +37,6 @@ return {
                 capabilities = capabilities,
             })
 
-            -- Global mappings.
-            -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-            vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
-            vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-            vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-            vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
-
             -- Use LspAttach autocommand to only map the following keys
             -- after the language server attaches to the current buffer
             vim.api.nvim_create_autocmd("LspAttach", {
@@ -55,20 +48,42 @@ return {
                     -- Buffer local mappings.
                     -- See `:help vim.lsp.*` for documentation on any of the below functions
                     local opts = { buffer = ev.buf }
+
+                    opts.desc = "Show LSP references"
+                    vim.keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
+
+                    opts.desc = "Go to declaration"
                     vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-                    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+
+                    opts.desc = "Show LSP definitions"
+                    vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
+
+                    opts.desc = "Show LSP implementations"
+                    vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
+
+                    opts.desc = "Show LSP type definitions"
+                    vim.keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+
+                    opts.desc = "See available code actions"
+                    vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
+
+                    opts.desc = "Smart rename"
+                    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+
+                    opts.desc = "Show buffer diagnostics"
+                    vim.keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
+
+                    opts.desc = "Show line diagnostics"
+                    vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
+
+                    opts.desc = "Go to previous diagnostic"
+                    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+
+                    opts.desc = "Go to next diagnostic"
+                    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+
+                    opts.desc = "Show documentation for what is under cursor"
                     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-                    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-                    vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
-                    vim.keymap.set("n", "<space>wa", vim.lsp.buf.add_workspace_folder, opts)
-                    vim.keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder, opts)
-                    vim.keymap.set("n", "<space>wl", function()
-                        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-                    end, opts)
-                    vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
-                    vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
-                    vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
-                    vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
                 end,
             })
         end,
