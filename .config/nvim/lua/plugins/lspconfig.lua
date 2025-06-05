@@ -9,6 +9,7 @@ return {
                 "rust_analyzer",
                 "clangd",
                 "tinymist",
+                "texlab",
             },
         },
         dependencies = {
@@ -36,6 +37,7 @@ return {
                 },
                 capabilities = capabilities,
             })
+            lspconfig.texlab.setup({ capabilities = capabilities })
 
             -- Use LspAttach autocommand to only map the following keys
             -- after the language server attaches to the current buffer
