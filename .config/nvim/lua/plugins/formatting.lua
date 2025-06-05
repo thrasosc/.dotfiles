@@ -10,6 +10,7 @@ return {
                 "clang-format",
                 "rustfmt",
                 "typstyle",
+                "latexindent",
             },
         },
     },
@@ -45,6 +46,7 @@ return {
                 cpp = { "clang_format" },
                 rust = { "rustfmt" },
                 typst = { "typstyle" },
+                tex = { "latexindent" },
             },
             -- Set default options
             default_format_opts = {
