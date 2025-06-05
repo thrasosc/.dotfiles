@@ -1,29 +1,29 @@
 -- Plugins
 require("config.lazy")
 
--- General Settings
-vim.cmd("setlocal spelllang=en_gb")
-vim.cmd("set mouse=a")
-vim.cmd("set clipboard=unnamed") -- on Linux this needs to be unnamedplus
+-- General
+vim.opt.spelllang = "en_gb" -- Set spell check language to British English
+vim.opt.mouse = "a" -- Enable mouse support in all modes
+vim.opt.clipboard = "unnamed" -- Use system clipboard (on Linux use "unnamedplus")
 
 -- Interface
-vim.cmd("set number")
-vim.cmd("set relativenumber")
-vim.cmd("set nowrap")
-vim.cmd("set termguicolors")
-vim.cmd("set wildmode=longest,list,full")
-vim.diagnostic.config({ virtual_text = true })
-vim.opt.guicursor = "n-v-c:block,i-ci-ve:block-blinkwait300-blinkon200-blinkoff150,r-cr:hor20,o:hor50" -- Configure cursor to be a blinking block in insert mode
+vim.opt.number = true -- Show absolute line numbers
+vim.opt.relativenumber = true -- Show relative line numbers (useful for motions like 5j)
+vim.opt.wrap = false -- Don't wrap long lines
+vim.opt.termguicolors = true -- Enable 24-bit RGB color support
+vim.opt.wildmode = "longest,list,full" -- Command-line completion behavior
+vim.diagnostic.config({ virtual_text = true }) -- Show diagnostic messages inline
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:block-blinkwait300-blinkon200-blinkoff150,r-cr:hor20,o:hor50" -- Blinking block cursor in insert mode
 
 -- Indentation
-vim.cmd("set shiftwidth=4")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=4")
-vim.cmd("set expandtab")
-vim.cmd("set autoindent")
+vim.opt.shiftwidth = 4 -- Number of spaces for each indentation level
+vim.opt.tabstop = 4 -- Number of spaces a tab character represents
+vim.opt.softtabstop = 4 -- Number of spaces for tab key in insert mode
+vim.opt.expandtab = true -- Convert tabs to spaces
+vim.opt.autoindent = true -- Copy indent from current line when starting new line
 
--- Searching
-vim.cmd("set hlsearch")
-vim.cmd("set incsearch")
-vim.cmd("set ignorecase")
-vim.cmd("set smartcase")
+-- Search
+vim.opt.hlsearch = true -- Highlight all search matches
+vim.opt.incsearch = true -- Show search matches as you type
+vim.opt.ignorecase = true -- Ignore case in search patterns
+vim.opt.smartcase = true -- Override ignorecase if search contains uppercase
