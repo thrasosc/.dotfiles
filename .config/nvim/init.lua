@@ -5,6 +5,13 @@ require("config.lazy")
 vim.opt.spelllang = "en_gb" -- Set spell check language to British English
 vim.opt.mouse = "a" -- Enable mouse support in all modes
 vim.opt.clipboard = "unnamed" -- Use system clipboard (on Linux use "unnamedplus")
+-- Prevent automatic comment insertion on new lines
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "*",
+    callback = function()
+        vim.opt_local.formatoptions:remove({ "c", "r", "o" })
+    end,
+})
 
 -- Interface
 vim.opt.number = true -- Show absolute line numbers
