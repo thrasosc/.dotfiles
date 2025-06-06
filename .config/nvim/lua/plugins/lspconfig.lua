@@ -24,11 +24,27 @@ return {
             local lspconfig = require("lspconfig")
             local capabilities = require("blink.cmp").get_lsp_capabilities()
 
+            -- Swift
+            lspconfig.sourcekit.setup({
+                capabilities = require("blink.cmp").get_lsp_capabilities({
+                    workspace = {
+                        didChangeWatchedFiles = {
+                            dynamicRegistration = true,
+                        },
+                    },
+                }),
+            })
+            -- Lua
             lspconfig.lua_ls.setup({ capabilities = capabilities })
+            -- Python
             lspconfig.pyright.setup({ capabilities = capabilities })
+            -- Typescript
             lspconfig.ts_ls.setup({ capabilities = capabilities })
+            -- Rust
             lspconfig.rust_analyzer.setup({ capabilities = capabilities })
+            -- C/C++
             lspconfig.clangd.setup({ capabilities = capabilities })
+            -- Typst
             lspconfig.tinymist.setup({
                 settings = {
                     formatterMode = "typstyle",
@@ -37,6 +53,7 @@ return {
                 },
                 capabilities = capabilities,
             })
+            -- LaTeX
             lspconfig.texlab.setup({ capabilities = capabilities })
 
             -- Use LspAttach autocommand to only map the following keys
