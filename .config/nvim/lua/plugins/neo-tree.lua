@@ -1,18 +1,18 @@
 return {
-	"nvim-neo-tree/neo-tree.nvim",
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-		"MunifTanjim/nui.nvim",
-		-- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
-	},
-	lazy = false, -- neo-tree will lazily load itself
-	---@module "neo-tree"
-	---@type neotree.Config?
-	opts = {
+    "nvim-neo-tree/neo-tree.nvim",
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+        "MunifTanjim/nui.nvim",
+        -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
+    },
+    lazy = false, -- neo-tree will lazily load itself
+    ---@module "neo-tree"
+    ---@type neotree.Config?
+    opts = {
         -- config
-	},
-	keys = {
-		{ "<C-n>", ":Neotree toggle right<CR>", desc = "Toggle Neotree" },
-	},
+    },
+    keys = {
+        { "<C-n>", ":Neotree toggle right<CR>", desc = "Toggle Neotree" },
+    },
 }
