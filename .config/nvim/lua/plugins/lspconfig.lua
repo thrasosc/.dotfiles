@@ -26,6 +26,7 @@ return {
 
             -- Swift
             lspconfig.sourcekit.setup({
+                cmd = { vim.trim(vim.fn.system("xcrun -f sourcekit-lsp")) },
                 capabilities = require("blink.cmp").get_lsp_capabilities({
                     workspace = {
                         didChangeWatchedFiles = {
