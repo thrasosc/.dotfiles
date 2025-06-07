@@ -11,6 +11,7 @@ return {
                 "rustfmt",
                 "typstyle",
                 "latexindent",
+                "swiftlint",
             },
         },
     },
@@ -33,6 +34,10 @@ return {
             },
         },
         opts = {
+            -- Define your linters
+            linters_by_ft = {
+                swift = { "swiftlint" },
+            },
             -- Define your formatters
             formatters_by_ft = {
                 lua = { "stylua" },
@@ -47,6 +52,7 @@ return {
                 rust = { "rustfmt" },
                 typst = { "typstyle" },
                 tex = { "latexindent" },
+                swift = { "swiftformat" },
             },
             -- Set default options
             default_format_opts = {
