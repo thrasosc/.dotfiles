@@ -21,6 +21,7 @@ vim.opt.termguicolors = true -- Enable 24-bit RGB color support
 vim.opt.wildmode = "longest,list,full" -- Command-line completion behavior
 vim.diagnostic.config({ virtual_text = true }) -- Show diagnostic messages inline
 vim.opt.guicursor = "n-v-c:block,i-ci-ve:block-blinkwait300-blinkon200-blinkoff150,r-cr:hor20,o:hor50" -- Blinking block cursor in insert mode
+vim.opt.laststatus = 3 -- Set statusline to be global across all windows
 
 -- Indentation
 vim.opt.shiftwidth = 4 -- Number of spaces for each indentation level
