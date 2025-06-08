@@ -67,18 +67,24 @@ return {
                 git_ignored = false,
             },
 
-            -- On attach "h, j, k, l Style Navigation And Editing" recipe keymaps
             on_attach = function(bufnr)
                 local opts = function(desc)
                     return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
                 end
+                -- default mappings
+                api.config.mappings.default_on_attach(bufnr)
+
+                -- custom mappings
+                vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
+
+                -- "h, j, k, l Style Navigation And Editing" recipe mappings
                 vim.keymap.set("n", "l", edit_or_open, opts("Edit Or Open"))
                 vim.keymap.set("n", "L", vsplit_preview, opts("Vsplit Preview"))
                 vim.keymap.set("n", "h", api.tree.close, opts("Close"))
                 vim.keymap.set("n", "H", api.tree.collapse_all, opts("Collapse All"))
             end,
         })
-        -- Global "h, j, k, l Style Navigation And Editing" recipe keymaps
+        -- Global "h, j, k, l Style Navigation And Editing" recipe mappings
         vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeToggle<cr>", { silent = true, noremap = true })
     end,
 }
