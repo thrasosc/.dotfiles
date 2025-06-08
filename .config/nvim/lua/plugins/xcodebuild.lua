@@ -9,7 +9,11 @@ return {
     },
     config = function()
         require("xcodebuild").setup({
-            -- put some options here or leave it empty to use default settings
+            integrations = {
+                pymobiledevice = {
+                    enabled = true,
+                },
+            },
         })
 
         vim.keymap.set("n", "<leader>X", "<cmd>XcodebuildPicker<cr>", { desc = "Show Xcodebuild Actions" })
