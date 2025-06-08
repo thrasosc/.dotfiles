@@ -3,7 +3,7 @@ font-family = "Fantasque Sans Mono"
 font-size = 16
 
 # Theme
-theme = light:ayu_light,dark:ayu
+theme = light:NvimLight,dark:NvimDark
 
 # Window
 window-height = 29
