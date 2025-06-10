@@ -24,17 +24,6 @@ return {
             local lspconfig = require("lspconfig")
             local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-            -- Swift
-            lspconfig.sourcekit.setup({
-                cmd = { vim.trim(vim.fn.system("xcrun -f sourcekit-lsp")) },
-                capabilities = require("blink.cmp").get_lsp_capabilities({
-                    workspace = {
-                        didChangeWatchedFiles = {
-                            dynamicRegistration = true,
-                        },
-                    },
-                }),
-            })
             -- Lua
             lspconfig.lua_ls.setup({ capabilities = capabilities })
             -- Python
@@ -56,6 +45,17 @@ return {
             })
             -- LaTeX
             lspconfig.texlab.setup({ capabilities = capabilities })
+            -- Swift
+            lspconfig.sourcekit.setup({
+                cmd = { vim.trim(vim.fn.system("xcrun -f sourcekit-lsp")) },
+                capabilities = require("blink.cmp").get_lsp_capabilities({
+                    workspace = {
+                        didChangeWatchedFiles = {
+                            dynamicRegistration = true,
+                        },
+                    },
+                }),
+            })
 
             -- Use LspAttach autocommand to only map the following keys
             -- after the language server attaches to the current buffer
