@@ -6,6 +6,8 @@ return {
     config = function()
         local dap = require("dap")
 
+        -- DAPs are installed in the mason-tool-installer.lua file
+
         -- Configure codelldb adapter
         dap.adapters.codelldb = {
             type = "server",

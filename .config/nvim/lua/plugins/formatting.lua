@@ -1,21 +1,5 @@
 return {
     {
-        "WhoIsSethDaniel/mason-tool-installer.nvim", -- Ensure installed formatters, linters, etc. (mason-lspconfig only downloads LSPs)
-        opts = {
-            ensure_installed = { -- Formatters
-                "stylua",
-                "prettier",
-                "isort",
-                "black",
-                "clang-format",
-                "rustfmt",
-                "typstyle",
-                "latexindent",
-                "swiftlint",
-            },
-        },
-    },
-    {
         "stevearc/conform.nvim",
         event = { "BufWritePre" },
         cmd = { "ConformInfo" },
@@ -34,6 +18,8 @@ return {
             },
         },
         opts = {
+            -- Formatters and linters are installed in the mason-tool-installer.lua file
+
             -- Define your linters
             linters_by_ft = {
                 swift = { "swiftlint" },
