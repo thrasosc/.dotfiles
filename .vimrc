@@ -1,4 +1,16 @@
 " Plugin Management
+
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
@@ -6,7 +18,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-Plug 'morhetz/gruvbox'
 Plug 'sile-typesetter/vim-sile'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-repeat'
@@ -31,7 +42,6 @@ set showmatch
 set termguicolors
 set wildmode=longest,list,full
 set background=dark
-autocmd vimenter * ++nested colorscheme gruvbox
 
 " Indentation
 set shiftwidth=4
