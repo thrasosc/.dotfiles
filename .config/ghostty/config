@@ -1,6 +1,6 @@
 # Font
 font-family = "Fantasque Sans Mono"
-font-size = 16
+font-size = 14
 
 # Theme
 theme = light:NvimLight,dark:NvimDark
