@@ -18,7 +18,3 @@
 # Ghostty
 !.config/ghostty/
 !.config/ghostty/config
-
-# GitUI
-!.config/gitui/
-!.config/gitui/**
