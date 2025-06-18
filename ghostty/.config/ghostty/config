@@ -1,9 +1,6 @@
 # Font
 font-size = 14
 
-# Theme
-theme = light:NvimLight,dark:NvimDark
-
 # Window
 window-height = 29
 window-width = 105

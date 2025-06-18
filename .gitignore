@@ -1,20 +1,29 @@
 # Ignore everything by default
 *
 
-# Essentials
+# Allow directories (packages)
+!*/
+
+# Repository files
 !.gitignore
-!.README.md
-!.stow-local-ignore
-!.config/
+!README.md
 
-# Vim
-!.vimrc
+# Vim package
+!vim/
+!vim/.vimrc
 
-# Neovim
-!.config/nvim/
-!.config/nvim/**
-.config/nvim/**/.DS_Store
+# Neovim package  
+!nvim/
+!nvim/.config/
+!nvim/.config/nvim/
+!nvim/.config/nvim/**
 
-# Ghostty
-!.config/ghostty/
-!.config/ghostty/config
+# Ghostty package
+!ghostty/
+!ghostty/.config/
+!ghostty/.config/ghostty/
+!ghostty/.config/ghostty/**
+
+# Ignore .DS_Store files everywhere
+**/.DS_Store
+.DS_Store
