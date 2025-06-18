@@ -24,6 +24,13 @@
 !ghostty/.config/ghostty/
 !ghostty/.config/ghostty/**
 
+# VSCodium package
+!vscodium/
+!vscodium/Library/
+!vscodium/Library/Application Support/
+!vscodium/Library/Application Support/VSCodium/
+!vscodium/Library/Application Support/VSCodium/**
+
 # Ignore .DS_Store files everywhere
 **/.DS_Store
 .DS_Store

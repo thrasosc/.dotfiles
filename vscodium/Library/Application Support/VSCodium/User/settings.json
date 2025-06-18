@@ -1,0 +1,27 @@
+{
+    // VSCode Neovim
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    // LaTeX Workshop
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.view.pdf.invertMode.enabled": "auto",
+    "latex-workshop.view.pdf.invert": 0.88,
+    // VSCodium
+    "window.autoDetectColorScheme": true,
+    "files.autoSave": "afterDelay",
+    "security.workspace.trust.enabled": false,
+    "git.openRepositoryInParentFolders": "always",
+    "editor.fontSize": 14,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "editor.scrollBeyondLastLine": false,
+    "editor.lineNumbers": "relative",
+    "git.confirmSync": false,
+    "git.autofetch": true,
+}
