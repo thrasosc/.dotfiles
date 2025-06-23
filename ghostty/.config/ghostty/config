@@ -1,10 +1,6 @@
 # Font
 font-size = 14
 
-# Window
-window-height = 29
-window-width = 105
-
 # Cursor
 shell-integration-features = no-cursor
 
