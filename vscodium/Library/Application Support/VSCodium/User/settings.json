@@ -25,4 +25,5 @@
     "git.confirmSync": false,
     "git.autofetch": true,
     "redhat.telemetry.enabled": false,
+    "git.enableSmartCommit": true,
 }
