@@ -43,6 +43,7 @@
 !zed/.config/zed/
 !zed/.config/zed/settings.json
 !zed/.config/zed/tasks.json
+!zed/.config/zed/keymap.json
 
 # Ignore .DS_Store files everywhere
 **/.DS_Store
