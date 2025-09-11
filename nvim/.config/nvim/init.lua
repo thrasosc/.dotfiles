@@ -1,3 +1,6 @@
+-- Initialize lazy.nvim
+require("config.lazy")
+
 -- General
 vim.opt.clipboard = "unnamedplus"
 
