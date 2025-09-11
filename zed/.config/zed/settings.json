@@ -21,7 +21,7 @@
   },
   "autosave": {
     "after_delay": {
-      "milliseconds": 1000
+      "milliseconds": 0
     }
   },
   "lsp": {
@@ -35,6 +35,11 @@
       }
     }
   },
-  "soft_wrap": "editor_width",
-  "disable_ai": true
+  "disable_ai": true,
+  "languages": {
+    "LaTeX": {
+      "tab_size": 1,
+      "soft_wrap": "editor_width"
+    }
+  }
 }

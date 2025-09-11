@@ -14,5 +14,11 @@
       "f5": ["task::Spawn", { "task_name": "pdflatex_view" }],
       "shift-f5": ["task::Spawn", { "task_name": "latexmk_view" }]
     }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": "vim::PushAddSurrounds"
+    }
   }
 ]
