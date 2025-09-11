@@ -18,7 +18,7 @@
 !vim/
 !vim/.vimrc
 
-# Neovim package  
+# Neovim package
 !nvim/
 !nvim/.config/
 !nvim/.config/nvim/
@@ -36,6 +36,13 @@
 !vscodium/Library/Application Support/
 !vscodium/Library/Application Support/VSCodium/
 !vscodium/Library/Application Support/VSCodium/**
+
+# Zed package
+!zed/
+!zed/.config/
+!zed/.config/zed/
+!zed/.config/zed/settings.json
+!zed/.config/zed/tasks.json
 
 # Ignore .DS_Store files everywhere
 **/.DS_Store
