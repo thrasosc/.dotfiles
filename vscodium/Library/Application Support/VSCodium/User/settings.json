@@ -3,6 +3,7 @@
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
+
     // LaTeX Workshop
     "workbench.editorAssociations": {
         "*.pdf": "latex-workshop-pdf-hook"
@@ -12,6 +13,7 @@
     "latex-workshop.latex.autoClean.run": "onBuilt",
     // "latex-workshop.view.pdf.invertMode.enabled": "auto",
     // "latex-workshop.view.pdf.invert": 0.88,
+
     // VSCodium
     "window.autoDetectColorScheme": true,
     "files.autoSave": "afterDelay",
