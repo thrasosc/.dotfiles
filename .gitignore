@@ -45,6 +45,12 @@
 !zed/.config/zed/tasks.json
 !zed/.config/zed/keymap.json
 
+# Aerospace package
+!aerospace/
+!aerospace/.config/
+!aerospace/.config/aerospace/
+!aerospace/.config/aerospace/**
+
 # Ignore .DS_Store files everywhere
 **/.DS_Store
 .DS_Store
