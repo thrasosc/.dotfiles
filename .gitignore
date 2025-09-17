@@ -45,12 +45,6 @@
 !zed/.config/zed/tasks.json
 !zed/.config/zed/keymap.json
 
-# Vim package
-!yabai/
-!yabai/.config
-!yabai/.config/yabai/
-!yabai/.config/yabai/**
-
 # Ignore .DS_Store files everywhere
 **/.DS_Store
 .DS_Store
