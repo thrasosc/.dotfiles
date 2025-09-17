@@ -11,8 +11,8 @@
     "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
     "latex-workshop.formatting.latex": "latexindent",
     "latex-workshop.latex.autoClean.run": "onBuilt",
-    // "latex-workshop.view.pdf.invertMode.enabled": "auto",
-    // "latex-workshop.view.pdf.invert": 0.88,
+    "latex-workshop.view.pdf.invertMode.enabled": "auto",
+    "latex-workshop.view.pdf.invert": 0.88,
 
     // VSCodium
     "window.autoDetectColorScheme": true,
