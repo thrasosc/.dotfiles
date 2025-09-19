@@ -51,12 +51,6 @@
 !aerospace/.config/aerospace/
 !aerospace/.config/aerospace/**
 
-# Sketchybar package
-!sketchybar/
-!sketchybar/.config/
-!sketchybar/.config/sketchybar/
-!sketchybar/.config/sketchybar/**
-
 # Ignore .DS_Store files everywhere
 **/.DS_Store
 .DS_Store
