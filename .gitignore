@@ -51,6 +51,12 @@
 !aerospace/.config/aerospace/
 !aerospace/.config/aerospace/**
 
+# Helix package
+!helix/
+!helix/.config/
+!helix/.config/helix/
+!helix/.config/helix/**
+
 # Ignore .DS_Store files everywhere
 **/.DS_Store
 .DS_Store
