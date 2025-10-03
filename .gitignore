@@ -18,6 +18,11 @@
 !vim/
 !vim/.vimrc
 
+# Starship package
+!starship/
+!starship/.config/
+!starship/.config/starship.toml
+
 # Neovim package
 !nvim/
 !nvim/.config/
