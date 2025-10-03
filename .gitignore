@@ -30,13 +30,6 @@
 !ghostty/.config/ghostty/
 !ghostty/.config/ghostty/**
 
-# VSCodium package
-!vscodium/
-!vscodium/Library/
-!vscodium/Library/Application Support/
-!vscodium/Library/Application Support/VSCodium/
-!vscodium/Library/Application Support/VSCodium/**
-
 # VSCode package
 !vscode/
 !vscode/Library/
