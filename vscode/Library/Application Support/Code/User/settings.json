@@ -14,6 +14,11 @@
     "latex-workshop.view.pdf.invertMode.enabled": "auto",
     "latex-workshop.view.pdf.invert": 0.88,
 
+    // GitLab Workflow
+    "gitlab.duoAgentPlatform.enabled": false,
+    "gitlab.duoChat.enabled": false,
+    "gitlab.duoCodeSuggestions.enabled": false,
+
     // VSCode
     "window.autoDetectColorScheme": true,
     "files.autoSave": "afterDelay",
@@ -29,4 +34,5 @@
     "redhat.telemetry.enabled": false,
     "git.enableSmartCommit": true,
     "chat.disableAIFeatures": true,
+    "workbench.sideBar.location": "right",
 }
