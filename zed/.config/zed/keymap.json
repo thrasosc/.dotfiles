@@ -7,15 +7,6 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
-    //"context": "Editor && extension==tex", // This restricts the keybindings to tex files however does not work when in terminal
-    "bindings": {
-      "shift shift": ["task::Spawn", { "task_name": "forward_search" }],
-      "f5": ["task::Spawn", { "task_name": "pdflatex_view" }],
-      "shift-f5": ["task::Spawn", { "task_name": "latexmk_view" }]
-    }
-  },
-  {
     "context": "vim_mode == visual",
     "bindings": {
       "shift-s": "vim::PushAddSurrounds"

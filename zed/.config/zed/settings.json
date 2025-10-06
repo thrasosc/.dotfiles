@@ -9,6 +9,7 @@
 {
   "auto_signature_help": true,
   "preferred_line_length": 120,
+  "disable_ai": true,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -33,16 +34,15 @@
       "settings": {
         "texlab": {
           "build": {
-            "onSave": false
+            "executable": "lualatex",
+            "forwardSearchAfter": false
           }
         }
       }
     }
   },
-  "disable_ai": true,
   "languages": {
     "LaTeX": {
-      "tab_size": 1,
       "soft_wrap": "editor_width"
     }
   }
