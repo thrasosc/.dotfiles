@@ -35,7 +35,22 @@
         "texlab": {
           "build": {
             "executable": "lualatex",
-            "forwardSearchAfter": false
+            "onSave": true,
+            "forwardSearchAfter": true
+          },
+          "forwardSearch": {
+            "executable": "sioyek",
+            "args": [
+              "-g",
+              "--reuse-window",
+              "--inverse-search",
+              "zed \"%%1\":%%2",
+              "--forward-search-file",
+              "%f",
+              "--forward-search-line",
+              "%l",
+              "%p"
+            ]
           }
         }
       }
