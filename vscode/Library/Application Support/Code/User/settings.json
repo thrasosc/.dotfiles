@@ -34,5 +34,4 @@
     "redhat.telemetry.enabled": false,
     "git.enableSmartCommit": true,
     "chat.disableAIFeatures": true,
-    "workbench.sideBar.location": "right",
 }
