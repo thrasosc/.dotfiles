@@ -2,3 +2,4 @@ theme = light:One Half Light,dark:Ghostty Default Style Dark
 font-size = 15
 macos-option-as-alt = true
 shell-integration-features = no-cursor
+background-opacity = 0.975
