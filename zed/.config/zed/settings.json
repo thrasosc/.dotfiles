@@ -7,13 +7,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "agent": {
-    "default_model": {
-      "provider": "ollama",
-      "model": "gemma3:4b"
-    },
-    "model_parameters": []
-  },
   "features": {
     "edit_prediction_provider": "none"
   },
@@ -43,9 +36,9 @@
       "settings": {
         "texlab": {
           "build": {
-            "executable": "lualatex",
-            "onSave": true,
-            "forwardSearchAfter": true
+            "executable": "lualatex"
+            // "onSave": true,
+            // "forwardSearchAfter": true
           },
           "forwardSearch": {
             "executable": "sioyek",
@@ -62,6 +55,19 @@
             ]
           }
         }
+      }
+    },
+    "tinymist": {
+      "initialization_options": {
+        "preview": {
+          "background": {
+            "enabled": true
+          }
+        }
+      },
+      "settings": {
+        "exportPdf": "onSave",
+        "outputPath": "$root/$name"
       }
     }
   },
