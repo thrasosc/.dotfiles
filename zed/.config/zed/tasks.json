@@ -1,2 +1,15 @@
 // Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
-[]
+[
+  {
+    "label": "Open Typst Preview",
+    "command": "open -na Safari http://127.0.0.1:23635/ && osascript -e 'tell application \"Safari\" to close (every tab of every window whose URL is not \"http://127.0.0.1:23635/\")'",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "never",
+    "reveal_target": "dock",
+    "hide": "always",
+    "shell": "system",
+    "show_summary": true,
+    "show_command": true
+  }
+]
