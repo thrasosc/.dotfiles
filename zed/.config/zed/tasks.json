@@ -11,5 +11,18 @@
     "shell": "system",
     "show_summary": true,
     "show_command": true
+  },
+  {
+    "label": "LazyGit",
+    "command": "lazygit",
+    "shell": {
+      "program": "sh"
+    },
+    "hide": "on_success",
+    "reveal_target": "center",
+    "show_summary": false,
+    "show_command": false,
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true
   }
 ]

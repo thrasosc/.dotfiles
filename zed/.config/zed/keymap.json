@@ -7,6 +7,11 @@
 // from the command palette.
 [
   {
+    "bindings": {
+      "cmd-shift-g": ["task::Spawn", { "task_name": "LazyGit", "reveal_target": "center" }]
+    }
+  },
+  {
     "context": "vim_mode == visual",
     "bindings": {
       "shift-s": "vim::PushAddSurrounds"
