@@ -37,6 +37,20 @@
   },
   "format_on_save": "off",
   "lsp": {
+    "tinymist": {
+      "initialization_options": {
+        "preview": {
+          "background": {
+            "enabled": true
+          }
+        }
+      },
+      "settings": {
+        // "exportPdf": "onSave",
+        "outputPath": "$root/$name",
+        "formatterMode": "typstyle"
+      }
+    },
     "texlab": {
       "settings": {
         "texlab": {
@@ -61,25 +75,6 @@
           }
         }
       }
-    },
-    "tinymist": {
-      "initialization_options": {
-        "preview": {
-          "background": {
-            "enabled": true
-          }
-        }
-      },
-      "settings": {
-        // "exportPdf": "onSave",
-        "outputPath": "$root/$name",
-        "formatterMode": "typstyle"
-      }
-    }
-  },
-  "languages": {
-    "LaTeX": {
-      "soft_wrap": "editor_width"
     }
   }
 }
