@@ -47,7 +47,7 @@
       },
       "settings": {
         // "exportPdf": "onSave",
-        "outputPath": "$root/$name",
+        "outputPath": "$root/target/$dir/$name",
         "formatterMode": "typstyle"
       }
     },
