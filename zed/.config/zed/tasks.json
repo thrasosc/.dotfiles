@@ -10,7 +10,8 @@
     "hide": "always",
     "shell": "system",
     "show_summary": true,
-    "show_command": true
+    "show_command": true,
+    "tags": ["typst"]
   },
   {
     "label": "LazyGit",
