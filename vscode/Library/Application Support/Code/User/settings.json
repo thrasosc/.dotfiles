@@ -24,7 +24,7 @@
     "files.autoSave": "afterDelay",
     "security.workspace.trust.enabled": false,
     "git.openRepositoryInParentFolders": "always",
-    "editor.fontSize": 16,
+    "editor.fontSize": 15,
     "editor.minimap.enabled": false,
     "editor.wordWrap": "on",
     "editor.scrollBeyondLastLine": false,
