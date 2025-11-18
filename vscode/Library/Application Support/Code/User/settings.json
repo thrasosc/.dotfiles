@@ -27,5 +27,4 @@
     "git.autofetch": true,
     "redhat.telemetry.enabled": false,
     "git.enableSmartCommit": true,
-    "chat.disableAIFeatures": true,
 }
