@@ -12,6 +12,7 @@
       "provider": "copilot_chat",
       "model": "gpt-5-mini"
     },
+    "default_profile": "ask",
     "model_parameters": []
   },
   "features": {
@@ -24,7 +25,7 @@
     "metrics": false
   },
   "vim_mode": true,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "theme": {
     "mode": "system",
     "light": "One Light",
