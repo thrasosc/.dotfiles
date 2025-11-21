@@ -1,10 +1,4 @@
 {
-    // Cursor
-    "window.commandCenter": true,
-    "workbench.preferredLightColorTheme": "Cursor Light",
-    "window.autoDetectColorScheme": true,
-    "files.autoSave": "afterDelay",
-    "editor.fontSize": 14,
     // Vim
     "vim.easymotion": true,
     "vim.incsearch": true,
@@ -18,5 +12,12 @@
     "vim.leader": "<space>",
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
-    }
+    },
+    // Cursor
+    "window.commandCenter": true,
+    "workbench.preferredLightColorTheme": "Cursor Light",
+    "window.autoDetectColorScheme": true,
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 14,
+    "git.confirmSync": false,
 }
