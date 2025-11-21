@@ -1,0 +1,22 @@
+{
+    // Cursor
+    "window.commandCenter": true,
+    "workbench.preferredLightColorTheme": "Cursor Light",
+    "window.autoDetectColorScheme": true,
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 14,
+    // Vim
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "vim.leader": "<space>",
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    }
+}

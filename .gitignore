@@ -43,6 +43,14 @@
 !vscode/Library/Application Support/Code/User/
 !vscode/Library/Application Support/Code/User/**
 
+# Cursor package
+!cursor/
+!cursor/Library/
+!vscode/Library/Application Support/
+!cursor/Library/Application Support/Cursor/
+!cursor/Library/Application Support/Cursor/User/
+!cursor/Library/Application Support/Cursor/User/**
+
 # Zed package
 !zed/
 !zed/.config/
