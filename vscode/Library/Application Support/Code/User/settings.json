@@ -1,9 +1,4 @@
 {
-    // VSCode Neovim
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
-
     // LaTeX Workshop
     "workbench.editorAssociations": {
         "*.pdf": "latex-workshop-pdf-hook"
@@ -13,6 +8,21 @@
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.view.pdf.invertMode.enabled": "auto",
     "latex-workshop.view.pdf.invert": 0.88,
+
+    // Vim
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "vim.leader": "<space>",
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
 
     // VSCode
     "window.autoDetectColorScheme": true,
@@ -27,4 +37,5 @@
     "git.autofetch": true,
     "redhat.telemetry.enabled": false,
     "git.enableSmartCommit": true,
+    "chat.disableAIFeatures": true
 }
