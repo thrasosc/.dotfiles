@@ -21,4 +21,5 @@
     "editor.fontSize": 14,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
+    "git.autofetch": true,
 }
