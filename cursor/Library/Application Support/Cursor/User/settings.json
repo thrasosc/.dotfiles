@@ -55,4 +55,5 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.autofetch": true,
+    "java.saveActions.organizeImports": true,
 }
