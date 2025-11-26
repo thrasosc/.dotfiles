@@ -20,6 +20,19 @@
         "<C-f>": false
     },
     "vim.leader": "<space>",
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "p"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d",
+                "P"
+            ]
+        }
+    ],
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
