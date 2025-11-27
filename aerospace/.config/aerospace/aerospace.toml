@@ -90,7 +90,7 @@ automatically-unhide-macos-hidden-apps = false
     #     activate
     # end tell'
     # '''
-    
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
     alt-enter = 'exec-and-forget open -a /Applications/Ghostty.app ~'
 
@@ -213,3 +213,7 @@ automatically-unhide-macos-hidden-apps = false
     run= [
       "layout tiling",
     ]
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.FaceTime'
+    run = 'layout floating'
