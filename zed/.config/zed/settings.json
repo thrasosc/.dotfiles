@@ -7,36 +7,45 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  // AI Agent
   "agent": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5-mini"
+      "provider": "google",
+      "model": "gemini-2.5-flash"
     },
     "default_profile": "ask",
     "model_parameters": []
   },
+
+  // Features
   "features": {
     "edit_prediction_provider": "none"
   },
-  "auto_signature_help": true,
-  "preferred_line_length": 120,
+
+  // Privacy
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
+
+  // Editor
   "vim_mode": true,
   "relative_line_numbers": "enabled",
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "One Dark"
-  },
   "autosave": {
     "after_delay": {
       "milliseconds": 0
     }
   },
   "format_on_save": "off",
+
+  // Appearance
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+
+  // Language Servers
   "lsp": {
     "tinymist": {
       "initialization_options": {
@@ -47,34 +56,8 @@
         }
       },
       "settings": {
-        // "exportPdf": "onSave",
         "outputPath": "$root/target/$dir/$name",
         "formatterMode": "typstyle"
-      }
-    },
-    "texlab": {
-      "settings": {
-        "texlab": {
-          "build": {
-            "executable": "lualatex"
-            // "onSave": true,
-            // "forwardSearchAfter": true
-          },
-          "forwardSearch": {
-            "executable": "sioyek",
-            "args": [
-              "-g",
-              "--reuse-window",
-              "--inverse-search",
-              "zed \"%%1\":%%2",
-              "--forward-search-file",
-              "%f",
-              "--forward-search-line",
-              "%l",
-              "%p"
-            ]
-          }
-        }
       }
     }
   }
